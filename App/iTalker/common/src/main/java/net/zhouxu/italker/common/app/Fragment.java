@@ -7,8 +7,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import net.zhouxu.italker.common.R;
+
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
+
 
 /**
  * Created by zx on 2018/4/19.
@@ -16,7 +20,7 @@ import butterknife.Unbinder;
 
 public abstract class Fragment extends android.support.v4.app.Fragment {
     protected View mRoot;
-    protected Unbinder mRootUnbinder;
+    protected Unbinder mRootUnBinder;
 
     @Override
     public void onAttach(Context context) {
@@ -28,7 +32,6 @@ public abstract class Fragment extends android.support.v4.app.Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-
         if (mRoot == null) {
             int layId = getContentLayoutId();
             //初始化当前的根布局，但是不在创建时就添加到container里边
@@ -48,6 +51,7 @@ public abstract class Fragment extends android.support.v4.app.Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         //View创建完成初始化数据
+        //initWidget(view);
         initData();
     }
 
@@ -60,7 +64,7 @@ public abstract class Fragment extends android.support.v4.app.Fragment {
 
     //初始化控件
     protected void initWidget(View root) {
-        mRootUnbinder = ButterKnife.bind(root);
+        mRootUnBinder = ButterKnife.bind(this,root);
     }
 
     //初始化数据
@@ -70,7 +74,7 @@ public abstract class Fragment extends android.support.v4.app.Fragment {
 
     /*返回按键触发时调用
     * 返回true代表我已经处理返回逻辑，Activity不用自己finish
-    * 返回false代表我不出来，Activity自己处理*/
+    * 返回false代表我不处理，Activity自己处理*/
     public boolean onBackPressed() {
         return false;
     }

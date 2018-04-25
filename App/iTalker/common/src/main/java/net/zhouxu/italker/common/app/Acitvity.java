@@ -67,7 +67,7 @@ public abstract class Acitvity extends AppCompatActivity {
         @SuppressLint("RestrictedApi")
         List<android.support.v4.app.Fragment> fragments = getSupportFragmentManager().getFragments();
         if (fragments != null && fragments.size() > 0) {
-            for (android.support.v4.app.Fragment fragment : fragments) {
+            for (Fragment fragment : fragments) {
                 //判断是否为我们能够处理的Fragment类型
                 if (fragment instanceof net.zhouxu.italker.common.app.Fragment) {
                     //判断是否拦截了返回按钮
