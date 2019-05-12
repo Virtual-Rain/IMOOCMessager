@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="com.yalantis:ucrop-2.2.0-native">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.0-native.aar/03a4b5363ded30b7ec830a5a6eee121a/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/ucrop-2.2.0-native.aar/03a4b5363ded30b7ec830a5a6eee121a/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.yalantis/ucrop/2.2.0-native/f2d8001359f0b42ba27d01f03f5bed28d7b1ce60/ucrop-2.2.0-native-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

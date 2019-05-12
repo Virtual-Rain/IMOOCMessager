@@ -108,6 +108,11 @@ public abstract class RecyclerAdapter<Data>
         return mDataList.size();
     }
 
+    /*返回整个集合*/
+    public List<Data>getItems(){
+        return mDataList;
+    }
+
     /*插入一条数据并通知插入
     * @param data Data*/
     public void add(Data data) {

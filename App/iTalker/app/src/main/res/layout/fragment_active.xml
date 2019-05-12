@@ -4,10 +4,10 @@
     android:layout_height="match_parent"
     tools:context="net.zhouxu.italker.italker.push.frags.main.ActiveFragment">
 
-    <net.zhouxu.italker.common.widget.GalleyView
-        android:id="@+id/galleyView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="1dp"/>
+    <!--<net.zhouxu.italker.common.widget.GalleryView-->
+        <!--android:id="@+id/galleryView"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:padding="1dp"/>-->
 
 </FrameLayout>

@@ -13,6 +13,7 @@ buildscript {
         classpath 'com.jakewharton:butterknife-gradle-plugin:8.5.1'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
+
     }
 }
 
@@ -21,6 +22,8 @@ allprojects {
         google()
         jcenter()
         maven { url "https://www.jitpack.io" }
+        //个推私有Maven URL 地址
+        maven{url "http://mvn.gt.igexin.com/nexus/content/repositories/releases/"}
 
     }
 }
@@ -38,4 +41,11 @@ ext{
     geniusVersion = '2.0.0'
     glideVersion = '3.7.0'
     circleimageviewVersion = '2.1.0'
+    ucropVersion = "2.2.0-native"
+    easyPMVersion = "0.3.0"
+    ossVersion = '2.3.0'
+    gsonVersion = '2.8.0'
+    retrofitVersion = '2.1.0'
+    getuiVersion = '2.9.3.0'
+    dbflowVersion = "4.0.0-beta7"
 }

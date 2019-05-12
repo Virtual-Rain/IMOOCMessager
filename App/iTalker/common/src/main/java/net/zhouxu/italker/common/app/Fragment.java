@@ -7,9 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import net.zhouxu.italker.common.R;
+import net.zhouxu.italker.common.widget.convention.PlaceHolderView;
 
-import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
@@ -21,6 +20,9 @@ import butterknife.Unbinder;
 public abstract class Fragment extends android.support.v4.app.Fragment {
     protected View mRoot;
     protected Unbinder mRootUnBinder;
+    protected PlaceHolderView mPlaceHolderView;
+    //是否第一次初始化数据
+    protected boolean mIsFirstInitData=true;
 
     @Override
     public void onAttach(Context context) {
@@ -50,8 +52,12 @@ public abstract class Fragment extends android.support.v4.app.Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        if(mIsFirstInitData){
+            //触发一次后就不会触发
+            mIsFirstInitData=false;
+            onFirstInitData();
+        }
         //View创建完成初始化数据
-        //initWidget(view);
         initData();
     }
 
@@ -71,11 +77,19 @@ public abstract class Fragment extends android.support.v4.app.Fragment {
     protected void initData() {
 
     }
+    //首次初始化数据调用
+    protected void onFirstInitData() {
 
+    }
     /*返回按键触发时调用
     * 返回true代表我已经处理返回逻辑，Activity不用自己finish
     * 返回false代表我不处理，Activity自己处理*/
     public boolean onBackPressed() {
         return false;
+    }
+
+    /*设置占位布局*/
+    public void setPlaceHolderView(PlaceHolderView placeHolderView){
+        this.mPlaceHolderView=placeHolderView;
     }
 }

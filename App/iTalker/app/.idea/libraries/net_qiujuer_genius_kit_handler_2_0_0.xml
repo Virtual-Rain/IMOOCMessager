@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="net.qiujuer.genius:kit-handler-2.0.0">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/kit-handler-2.0.0.aar/9039f950d92aa1e0fe42d0408dcdc4de/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/kit-handler-2.0.0.aar/9039f950d92aa1e0fe42d0408dcdc4de/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.qiujuer.genius/kit-handler/2.0.0/2bc8806e762b2b6fb346fcbabd285f391df426e3/kit-handler-2.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

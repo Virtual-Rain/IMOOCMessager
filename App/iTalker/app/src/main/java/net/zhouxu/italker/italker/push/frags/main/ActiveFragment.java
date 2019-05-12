@@ -2,14 +2,11 @@ package net.zhouxu.italker.italker.push.frags.main;
 
 
 import net.zhouxu.italker.common.app.Fragment;
-import net.zhouxu.italker.common.widget.GalleyView;
 import net.zhouxu.italker.italker.push.R;
 
-import butterknife.BindView;
-
 public class ActiveFragment extends Fragment {
-    @BindView(R.id.galleyView)
-    GalleyView mGalley;
+//    @BindView(R.id.galleryView)
+//    GalleryView mGallery;
 
     public ActiveFragment() {
         // Required empty public constructor
@@ -23,11 +20,11 @@ public class ActiveFragment extends Fragment {
     @Override
     protected void initData() {
         super.initData();
-        mGalley.setup(getLoaderManager(), new GalleyView.SelectedChangeListener() {
-            @Override
-            public void onSelectedCountChanged(int count) {
-
-            }
-        });
+//        mGallery.setup(getLoaderManager(), new GalleryView.SelectedChangeListener() {
+//            @Override
+//            public void onSelectedCountChanged(int count) {
+//
+//            }
+//        });
     }
 }
